@@ -1,0 +1,51 @@
+ <!doctype html>
+ <html lang="en" xmlns:th="http://www.thymeleaf.org">
+ <head>
+ 	<meta charset="UTF-8" />
+ 	<title> Footer Example </title>
+ </head>
+
+ <body>
+ 	<h1>  Footer Example </h1>
+ 	
+ 	
+ 	<!--  static footer -->  
+ 	
+ 	
+ 	<footer id="fragmentTag" th:fragment="footer1(title,subtitle)">
+ 	
+ 	<div class="container">
+ 	
+ 	<h1 th:text=" ${title}"> </h1>
+ 	<h1 th:text=" ${subtitle}">  </h1>
+ 	<ul>
+ 		<li> Web Development </li>
+ 		<li> SEO </li>
+ 		<li> App Development </li>
+ 		<li> UI/UX Development </li>
+ 	</ul>
+ 	
+ 	</div>
+ 	
+ 	</footer>
+ 	
+ 	
+ 	 <!--  static footer -->  
+ 	 <!-- <footer id="fragmentTag" th:fragment="footer1">
+ 	
+ 	<div class="container">
+ 	
+ 	<h1> These are the service we provide</h1>
+ 	<ul>
+ 		<li> Web Development </li>
+ 		<li> SEO </li>
+ 		<li> App Development </li>
+ 		<li> UI/UX Development </li>
+ 	</ul>
+ 	
+ 	</div>
+ 	
+ 	</footer> -->  
+ 	
+ </body>
+ </html>

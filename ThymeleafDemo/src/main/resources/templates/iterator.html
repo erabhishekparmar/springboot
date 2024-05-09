@@ -1,0 +1,23 @@
+ <!doctype html>
+ <html lang="en" xmlns:th="http://www.thymeleaf.org">
+ <head>
+ 	<meta charset="UTF-8" />
+ 	<title> Iterator Example </title>
+ </head>
+
+ <body>
+ 	<h1>  Iterator Example </h1>
+ 	
+ 	<h1 th:text="${names}"> </h1>
+ 	
+ 	<h2 th:each="n,status : ${names}"> 
+ 		<span th:style="${status.even} ? 'color:red;font-weight:bold' : '' " th:text=" ${status.index} +' '+  ${status.count} + '  '+ ${n}"> </span>
+ 	</h2>
+ 	
+ <!--  <h1 th:each="n,status : ${names}"> 
+ 		<span th:text=" ${status.index} +' '+  ${status.count} + '  '+ ${n}"> </span>
+ 	</h1> -->
+ 	 
+ 	 
+ </body>
+ </html>
