@@ -25,8 +25,14 @@ public class MbrServiceImpl implements MbrService {
 
 	@Override
 	public MBR addMember(MBR member) {
-		mbrRepository.save(member);
-		return member;
+		
+		MBR result = mbrRepository.save(member);
+		
+		// add the claim also here by calling feign client 
+		// API calling : method 2 - feign client
+		//claimService.addClaimExternal(claim);
+		
+		return result;
 	}
 
 	@Override
@@ -41,7 +47,7 @@ public class MbrServiceImpl implements MbrService {
 		// Claim claim =  restTemplate.getForObject("http://CLAIM-SERVICE/claim/mbr/"+member.getMbr_id(), Claim.class);
 
 		// API calling : method 2 - feign client
-		Claim claim =  claimService.getClaim(member.getMbr_id());
+		Claim claim =  claimService.getClaimExternal(member.getMbr_id());
 
 		System.out.println(claim);
 		List<Claim> list = List.of(claim);

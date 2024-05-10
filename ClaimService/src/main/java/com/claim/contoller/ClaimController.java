@@ -54,11 +54,6 @@ public class ClaimController {
 		List<Claim> list = claimService.getAllClaims();
 		return ResponseEntity.ok(list);
 	}
-	
-	/*
-	 * @GetMapping("/mbr/{id}") public ResponseEntity<Claim> getClaimsByMbrID(int
-	 * mbr_id){ Claim claim = claimService.getClaimByMbrID(mbr_id); return
-	 * ResponseEntity.ok(claim); }
-	 */
+	 
 	
 }
