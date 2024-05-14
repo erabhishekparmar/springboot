@@ -1,4 +1,4 @@
-package filehandling;
+package multithreading;
 
 public class MultiThreadingWithThreadPriorty extends Thread {
 
@@ -10,7 +10,7 @@ public class MultiThreadingWithThreadPriorty extends Thread {
 		
 		try {
 			for(int i= 0 ;i<10;i++) {
-				System.out.println(name + i);
+				System.out.println(name +" , "+i);
 				Thread.sleep(100);
 			}
 		}
@@ -31,6 +31,10 @@ public class MultiThreadingWithThreadPriorty extends Thread {
 		System.out.println("Thread name : " + th2.getName()+"Thread Priority : "+th2.getPriority());
 		
 		th1.setPriority(MAX_PRIORITY);
+		
+		System.out.println("Thread name : " + th1.getName()+"Thread Priority : "+th1.getPriority());
+		 
+		System.out.println("Thread name : " + th2.getName()+"Thread Priority : "+th2.getPriority());
 				
 		th1.start();
 		

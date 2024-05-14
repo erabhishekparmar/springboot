@@ -1,6 +1,6 @@
-package filehandling;
+package multithreading;
 
-public class MultiThreadingWithThread extends Thread {
+public class MultiThreadingWithRunnable implements Runnable {
 
 	@Override
 	public void run() {
@@ -10,7 +10,7 @@ public class MultiThreadingWithThread extends Thread {
 		
 		try {
 			for(int i= 0 ;i<10;i++) {
-				System.out.println(name + i);
+				System.out.println(name + ","+i);
 				Thread.sleep(100);
 			}
 		}
@@ -22,7 +22,9 @@ public class MultiThreadingWithThread extends Thread {
 	
 	public static void main(String args[]) {
 		
-		MultiThreadingWithThread th = new MultiThreadingWithThread();
+		MultiThreadingWithRunnable runnable = new MultiThreadingWithRunnable();
+		
+		Thread th = new Thread(runnable);
 		
 		System.out.println("Thread name : " + th.getName());
 				
@@ -32,7 +34,7 @@ public class MultiThreadingWithThread extends Thread {
 		
 		try {
 			for(int i= 0 ;i<10;i++) {
-				System.out.println(name +i);
+				System.out.println(name + ","+i);
 				Thread.sleep(100);
 			}
 		}

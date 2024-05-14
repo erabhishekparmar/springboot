@@ -1,4 +1,4 @@
-package filehandling;
+package multithreading;
 
 public class Printer_1 {
 

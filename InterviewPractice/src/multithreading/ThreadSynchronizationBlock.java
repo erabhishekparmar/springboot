@@ -1,11 +1,11 @@
-package filehandling;
+package multithreading;
 
-public class ThreadSynchronization extends Thread {
+public class ThreadSynchronizationBlock extends Thread {
 
 	String message;
 	Printer pw ;
 	
-	public ThreadSynchronization(String message, Printer pw)
+	public ThreadSynchronizationBlock(String message, Printer pw)
 	{
 	this.message = message;	
 	this.pw=pw;
@@ -24,9 +24,9 @@ public class ThreadSynchronization extends Thread {
 		
 		Printer pw = new Printer();
 		
-		ThreadSynchronization th1 = new ThreadSynchronization("Hi",pw);
+		ThreadSynchronizationBlock th1 = new ThreadSynchronizationBlock("Hi",pw);
 
-		ThreadSynchronization th2 = new ThreadSynchronization("Bye",pw);
+		ThreadSynchronizationBlock th2 = new ThreadSynchronizationBlock("Bye",pw);
 		
 		th1.start();
 		

@@ -1,11 +1,11 @@
-package filehandling;
+package multithreading;
 
 public class ThreadSynchronizationMethods extends Thread {
 
 	String message;
-	Printer pw ;
+	Printer_1 pw ;
 	
-	public ThreadSynchronizationMethods(String message, Printer pw)
+	public ThreadSynchronizationMethods(String message, Printer_1 pw)
 	{
 	this.message = message;	
 	this.pw=pw;
@@ -20,7 +20,7 @@ public class ThreadSynchronizationMethods extends Thread {
 	
 	public static void main(String args[]) {
 		
-		Printer pw = new Printer();
+		Printer_1 pw = new Printer_1();
 		
 		ThreadSynchronizationMethods th1 = new ThreadSynchronizationMethods("Hi",pw);
 

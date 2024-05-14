@@ -1,4 +1,4 @@
-package filehandling;
+package multithreading;
 
 public class MultiThreadingWithThreadJoin extends Thread {
 
@@ -9,7 +9,7 @@ public class MultiThreadingWithThreadJoin extends Thread {
 		
 		try {
 			for(int i= 0 ;i<10;i++) {
-				System.out.println(name + i);
+				System.out.println(name +" , "+i);
 				Thread.sleep(100);
 			}
 		}
