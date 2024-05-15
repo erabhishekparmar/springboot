@@ -6,7 +6,7 @@ public class ValidateBracket {
 
 	public static boolean validateString(String s) {
 		
-		Stack<Character> stack = new Stack();
+		Stack<Character> stack = new Stack<>();
 		
 		for(int i=0;i<s.length();i++) {
 			

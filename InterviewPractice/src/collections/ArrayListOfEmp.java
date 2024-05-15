@@ -19,7 +19,7 @@ public class ArrayListOfEmp {
 		
 		Collections.sort(e);
 		
-		System.out.println("____________AFter sorting ____________");
+		System.out.println("____________After sorting ____________");
 		
 		System.out.println(e);
 		

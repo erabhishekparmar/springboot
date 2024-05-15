@@ -1,4 +1,4 @@
-package java8;
+package streamsapi;
 
 import java.util.Arrays;
 import java.util.List;
@@ -22,8 +22,12 @@ public class StreamsDemo {
 		
 		System.out.println("______________________");
 		
+		// method references ::
 		list.stream().map(n->n*n).sorted().forEach(System.out::print);
+		
+		System.out.println();
 		 
+		// multiply by 10
 		List <Integer> result = list.stream().map(n->n*10).collect(Collectors.toList());
 
 		for(Integer x : result)

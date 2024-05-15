@@ -1,4 +1,4 @@
-package java8;
+package streamsapi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,7 @@ public class StreamsDemoGrouping {
 		list.add(new Emp("Abhishek","Pune"));
 		list.add(new Emp("Yash","UP"));
 		list.add(new Emp("Prashant","Surat"));
+		list.add(new Emp("Ajay","Pune"));
 		
 		Stream<Emp> empList = list.stream();
 		
@@ -21,7 +22,8 @@ public class StreamsDemoGrouping {
 		
 		System.out.println(newList);
 		
-		//list.stream().filter(n->n.getCity().startsWith("P")).forEach(System.out::print);
+		// employees whose city name start with P
+		list.stream().filter(n->n.getCity().startsWith("P")).forEach(System.out::print);
 		
 		
 		

@@ -6,17 +6,18 @@ public class TestFunctionalInterface implements FunctionalInterface {
 	public String test() {
 		return "Hi";
 	}
-	
-	// static method in interface
-	public static String justStaticMethod(){	
-		return "this is a static method in our class";
-	}
-	
+
 	// overriding is possible & optional 
 	@Override
 	public String justDefaultMethod() {
-		return "this is a default method in our class";
+		return "this is a default method in our class - overridden from Functional Interface";
 	}
+	
+	// static method in our class
+	public static String justStaticMethod(){	
+		return "this is a static method in TestFunctionalInterface class - not overridden";
+	}
+		
 	
 	public static void main(String[] args) {
 		
@@ -27,6 +28,8 @@ public class TestFunctionalInterface implements FunctionalInterface {
 		System.out.println(fi.justDefaultMethod());
 		
 		System.out.println(FunctionalInterface.justStaticMethod());
+		
+		System.out.println(TestFunctionalInterface.justStaticMethod());
 		
 	}
 	

@@ -1,6 +1,5 @@
 package collections;
 
-import java.security.KeyStore.Entry;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -41,7 +40,7 @@ public static void main(String[] args) {
 	
 	while(it3.hasNext()) {
 		
-		Map.Entry et = (Map.Entry)it3.next();
+		Map.Entry<String,Integer> et = (Map.Entry)it3.next();
 		System.out.println(et.getKey()+", "+et.getValue());
 		
 	}

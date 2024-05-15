@@ -13,7 +13,14 @@ public class EmpSet  {
 	
 	@Override
 	public boolean equals(Object obj) {
-		return this.equals((Emp)obj);
+		 
+		EmpSet inputEmp = (EmpSet)obj;
+		//return this.equals(inputEmp);
+		
+		return Integer.compare(this.age, inputEmp.age) == 0
+				&& (this.name.equals(inputEmp.name)) 
+				&& Double.compare(this.salary, inputEmp.salary) == 0;
+		
 	}
 	public EmpSet(int age, String name, double salary) {
 		super();

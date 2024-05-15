@@ -40,7 +40,7 @@ public class ConcurrentModificationException {
 		while(it.hasNext()) {
 			Map.Entry<Integer, String> result = (Map.Entry)it.next();
 			System.out.println(result.getKey()+", "+result.getValue());
-			map.put(4, "Four");
+			map.put(4, "Four"); // adding data while iterating over it
 		}
 		
 		

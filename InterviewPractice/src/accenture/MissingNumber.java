@@ -1,6 +1,5 @@
 package accenture;
 
-import java.util.Arrays;
 
 public class MissingNumber {
 	

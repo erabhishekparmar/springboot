@@ -1,9 +1,10 @@
-package java8;
+package streamsapi;
 
 public class Emp {
 
 	String name;
 	String city;
+	
 	public String getName() {
 		return name;
 	}

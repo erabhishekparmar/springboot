@@ -5,6 +5,7 @@ public class Student2 {
 	private int id;
 	private String name;
 	private int age;
+	
 	public Student2(int id, String name, int age) {
 		super();
 		this.id = id;
