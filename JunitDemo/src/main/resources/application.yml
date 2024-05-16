@@ -1,0 +1,22 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: JunitDemo
+  
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: springbootdemo
+    password: admin
+    url: jdbc:mysql://localhost:3306/microservices
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        
+   
