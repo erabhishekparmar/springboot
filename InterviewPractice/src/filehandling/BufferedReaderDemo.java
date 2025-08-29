@@ -1,10 +1,11 @@
 package filehandling;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class FileReading {
+public class BufferedReaderDemo {
 
 	public static void main(String args[]) {
 		
@@ -14,10 +15,11 @@ public class FileReading {
 
 			File file = new File("F:\\Study\\SpringBoot\\test.txt");
 			FileReader fr = new FileReader(file);
+			BufferedReader br = new BufferedReader(fr);
 			// System.out.print(fr.read());
-			int i;
-            while ((i = fr.read()) != -1) {  // read once inside condition
-                System.out.print((char) i); // print without skipping
+			String str;
+            while ((str = br.readLine()) != null) {  // read once inside condition
+                System.out.print(str+"\n"); // print without skipping
             }
 			fr.close();
 		} catch (IOException ex) {

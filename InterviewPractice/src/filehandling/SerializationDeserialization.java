@@ -27,24 +27,25 @@ public class SerializationDeserialization {
 			ObjectOutputStream objectOutput = new ObjectOutputStream(outputStream);
 			
 			objectOutput.writeObject(demo);
+			objectOutput.close();
 			
 			System.out.println("Object has been serialized!!"+demo);
 			
-			demo.b=4000;
+			Demo.b=4000;
 		}
 		catch(Exception ex){
 			ex.printStackTrace();
 		}
 		
 		Demo dDemo = null;
-		// Starting deserialization
+		// Starting de-serialization
 		try {
 		
 		FileInputStream inputStream = new FileInputStream(file);
 		ObjectInputStream objectInput = new ObjectInputStream(inputStream);
 
 		dDemo = (Demo)objectInput.readObject();
-		
+		objectInput.close();
 		System.out.println("Object has been Deserialized!"+dDemo);
 		
 		}

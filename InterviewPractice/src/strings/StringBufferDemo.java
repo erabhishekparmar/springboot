@@ -20,6 +20,11 @@ public class StringBufferDemo {
 		
 		System.out.println("Length : "+stringBuffer.length());
 		
+		stringBuffer.ensureCapacity(40);
+		
+		System.out.println("Capacity : "+stringBuffer.capacity()); // 50 bcz 40x2+2 = 50
+		
+		
 		
 	}
 }
