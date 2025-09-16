@@ -1,9 +1,11 @@
 package streamsapi;
 
-import java.time.Year;
+import java.lang.module.FindException;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class StreamsDemoFindMax {
@@ -25,7 +27,6 @@ public class StreamsDemoFindMax {
 		LinkedList<Integer> linkedList = list.stream().sorted().collect(Collectors.toCollection(LinkedList::new));
 		
 		System.out.println(linkedList);
-		
 	}
 	
 }

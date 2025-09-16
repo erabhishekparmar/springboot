@@ -24,17 +24,23 @@ public class MultiThreadingWithThreadJoin extends Thread {
 		MultiThreadingWithThreadJoin th = new MultiThreadingWithThreadJoin();
 		
 		MultiThreadingWithThreadJoin th1 = new MultiThreadingWithThreadJoin();
-				
-		th.start();
-		
+
 		try {
-			th.join();	 
+			th.start();
+			th.join(); // main waits until th finishes
+		} 
+		catch(InterruptedException ex) {
+			ex.printStackTrace();
 		}
+	
+		try {
+			th1.start();
+			th1.join(); // main waits until th1 finishes
+		} 
 		catch(InterruptedException ex) {
 			ex.printStackTrace();
 		}
 		
-		th1.start();
 		
 	}
 	

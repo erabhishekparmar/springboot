@@ -5,16 +5,16 @@ public class MultiThreadingWithThread extends Thread {
 	@Override
 	public void run() {
 		
+		Thread.currentThread().setName("Run Thread");
 		String name = Thread.currentThread().getName();
-		
 		
 		try {
 			for(int i= 0 ;i<10;i++) {
-				System.out.println(name + ","+i);
+				System.out.println(name + ": "+i);
 				Thread.sleep(100);
 			}
 		}
-		catch(Exception ex) {
+		catch(InterruptedException ex) {
 			ex.printStackTrace();
 		}
 		
@@ -32,7 +32,7 @@ public class MultiThreadingWithThread extends Thread {
 		
 		try {
 			for(int i= 0 ;i<10;i++) {
-				System.out.println(name +","+i);
+				System.out.println(name +":"+i);
 				Thread.sleep(100);
 			}
 		}

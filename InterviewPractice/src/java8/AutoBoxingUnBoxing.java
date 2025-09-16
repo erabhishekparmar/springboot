@@ -5,12 +5,12 @@ public class AutoBoxingUnBoxing {
 	public static void main(String[] args) {
 		
 		int i = 10;
-		Integer a = i; // autoboxing : interally Integer.valueOf(i)
+		Integer a = i; // auto-boxing : internally Integer.valueOf(i)
 		
 		System.out.println(a);
 		
-		Integer b = 20;
-		int x = b;	// unboxing 
+		Integer b = 30;
+		int x = b;	// un-boxing 
 		
 		System.out.println(x);
 		

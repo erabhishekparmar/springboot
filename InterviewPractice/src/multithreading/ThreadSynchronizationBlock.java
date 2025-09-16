@@ -14,7 +14,7 @@ public class ThreadSynchronizationBlock extends Thread {
 	@Override
 	public void run() {
 		
-		 synchronized(pw) {
+		synchronized(pw) {
 			pw.printMessage(message);
 		 }
 		

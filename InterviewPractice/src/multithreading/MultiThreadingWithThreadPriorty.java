@@ -26,15 +26,15 @@ public class MultiThreadingWithThreadPriorty extends Thread {
 		
 		MultiThreadingWithThreadPriorty th2 = new MultiThreadingWithThreadPriorty();
 		
-		System.out.println("Thread name : " + th1.getName()+"Thread Priority : "+th1.getPriority());
+		System.out.println(th1.getName()+" Thread Priority : "+th1.getPriority());
  
-		System.out.println("Thread name : " + th2.getName()+"Thread Priority : "+th2.getPriority());
+		System.out.println(th2.getName()+" Thread Priority : "+th2.getPriority());
 		
-		th1.setPriority(MAX_PRIORITY);
+		th2.setPriority(MAX_PRIORITY); // th2 will finish before th1
 		
-		System.out.println("Thread name : " + th1.getName()+"Thread Priority : "+th1.getPriority());
+		System.out.println(th1.getName()+" Thread Priority : "+th1.getPriority());
 		 
-		System.out.println("Thread name : " + th2.getName()+"Thread Priority : "+th2.getPriority());
+		System.out.println(th2.getName()+" Thread Priority : "+th2.getPriority());
 				
 		th1.start();
 		

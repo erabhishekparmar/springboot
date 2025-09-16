@@ -35,7 +35,6 @@ public class StreamsDemo {
 			System.out.print(x+" ");
 		}
 		
-		
 	}
 	
 }

@@ -10,7 +10,7 @@ public class StreamsDemoGrouping {
 
 	public static void main(String[] args) {
 		
-		List <Emp> list = new ArrayList<>();
+		List<Emp> list = new ArrayList<>();
 		list.add(new Emp("Abhishek","Pune"));
 		list.add(new Emp("Yash","UP"));
 		list.add(new Emp("Prashant","Surat"));
@@ -18,13 +18,13 @@ public class StreamsDemoGrouping {
 		
 		Stream<Emp> empList = list.stream();
 		
+		// group Emp by City
 		Map<String,List<Emp>> newList =  empList.collect(Collectors.groupingBy(Emp::getCity));
 		
 		System.out.println(newList);
 		
 		// employees whose city name start with P
 		list.stream().filter(n->n.getCity().startsWith("P")).forEach(System.out::print);
-		
 		
 		
 	}
