@@ -19,10 +19,16 @@ public class ArrayListOfEmp {
 		
 		Collections.sort(e);
 		
-		System.out.println("____________After sorting ____________");
+		System.out.println("____________After sorting based on name ____________");
 		
 		System.out.println(e);
 		
+		System.out.println("____________Clearing list ____________");
+
+		e.clear();
+		
+		System.out.println(e);
+
 		
 	}
 	

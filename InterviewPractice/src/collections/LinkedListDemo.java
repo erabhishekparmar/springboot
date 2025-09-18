@@ -25,9 +25,15 @@ public class LinkedListDemo {
 		
 		System.out.println(list);  // 0 1 2 5
 		
+		list.remove(0); // remove element at zero index
+		
+		System.out.println(list);  
+		
 		list.clear();
 		
 		System.out.println(list); // []
+		
+		
 		
 		
 	}

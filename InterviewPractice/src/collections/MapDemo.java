@@ -8,43 +8,64 @@ import java.util.Set;
 
 public class MapDemo {
 
-public static void main(String[] args) {
-	
-	Map<String,Integer> map = new HashMap<>();
-	
-	map.put("One", 1);
-	map.put("Three", 3);
-	map.put("Two", 2);
-	
-	Set<String> keys = map.keySet();
-	
-	System.out.println(keys);
-	
-	Iterator it = keys.iterator();
-	
-	while(it.hasNext()) {
-		System.out.println(it.next());
-	}
-	
-	Collection<Integer> values = map.values();
-	
-	Iterator it2 = values.iterator();
-	
-	while(it2.hasNext()) {
-		System.out.println(it2.next());
+	public static void main(String[] args) {
+
+		Map<String, Integer> mapNewMap = new HashMap<>();
+		mapNewMap.put("One", 1);
+		mapNewMap.put("Two", 2);
+		mapNewMap.put("Three", 3);
+		mapNewMap.put("Four", 4);
+		mapNewMap.put(null, null);
+		mapNewMap.put(null, null); // duplicate
+
+		System.out.println("mapNewMap : " + mapNewMap);
+
+		System.out.println("mapNewMap contains : Two :? " + mapNewMap.containsKey("Two"));
+
+		Map<String, Integer> mapNewMap2 = new HashMap<>();
+		mapNewMap2.put("Two", 2);
+		mapNewMap2.put("One", 1);
+		mapNewMap2.put("Three", 3);
+		mapNewMap2.put("Four", 4);
+		mapNewMap2.put(null, null);
+		mapNewMap2.put(null, null); // duplicate
+
+		System.out.println("Map 1 equals Map 2? " + mapNewMap.equals(mapNewMap2));
+		
+		System.out.println("value for key Two : " + mapNewMap.get("Two"));
+
+		System.out.println("Four removed from Map 2?" + mapNewMap2.remove("Four"));
+
+		System.out.println("Map 1 equals Map 2? " + mapNewMap.equals(mapNewMap2));
+
+		System.out.println("Replacing One value in mapNewMap2? " + mapNewMap2.replace("One", 0));
+
+		System.out.println("mapNewMap2 : " + mapNewMap2);
+
+		System.out.println("Map 1 equals Map 2? " + mapNewMap.equals(mapNewMap2));
+
+		mapNewMap2.clear();
+
+		System.out.println("mapNewMap2 : " + mapNewMap2);
+
+		// display the keys of mapNewMap
+		Set<String> keySet = mapNewMap.keySet();
+		System.out.println("keySet : " + keySet);
+
+		// display values of mapNewMap
+		Collection<Integer> valuesOfMap = mapNewMap.values();
+		System.out.println("valuesOfMap : " + valuesOfMap);
+
+		// display key and values both
+		Set entySet = mapNewMap.entrySet();
+
+		Iterator iterator = entySet.iterator();
+
+		while (iterator.hasNext()) {
+			Map.Entry<String, Integer> MapEntry = (Map.Entry) iterator.next();
+			System.out.println("key : " + MapEntry.getKey() + ", value " + MapEntry.getValue());
+		}
+
 	}
 
-	Set keyValue = map.entrySet();
-	
-	Iterator it3 = keyValue.iterator();
-	
-	while(it3.hasNext()) {
-		
-		Map.Entry<String,Integer> et = (Map.Entry)it3.next();
-		System.out.println(et.getKey()+", "+et.getValue());
-		
-	}
-	
-}
-	
 }

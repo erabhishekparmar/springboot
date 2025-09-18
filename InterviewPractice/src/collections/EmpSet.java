@@ -20,6 +20,7 @@ public class EmpSet  {
 		return Integer.compare(this.age, inputEmp.age) == 0
 				&& (this.name.equals(inputEmp.name)) 
 				&& Double.compare(this.salary, inputEmp.salary) == 0;
+	
 		
 	}
 	public EmpSet(int age, String name, double salary) {
