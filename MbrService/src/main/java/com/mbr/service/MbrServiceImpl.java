@@ -39,7 +39,7 @@ public class MbrServiceImpl implements MbrService {
 	public MBR getMemberById(int id) {
 		
 		MBR member = mbrRepository.findById(id).get();	
-		
+		// .orElseThrow(
 		// fetch claims 
 		
 		// API calling : method 1 

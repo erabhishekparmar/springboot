@@ -1,7 +1,10 @@
 package com.mbr.payload;
 
 import org.springframework.http.HttpStatus;
+
+import lombok.Builder;
  
+@Builder
 public class ApiResponse {
 
 	private String message;

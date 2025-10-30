@@ -24,6 +24,7 @@ public class MbrContoller {
 	// create
 	@PostMapping 
 	public ResponseEntity<MBR> addMBR(@RequestBody MBR member){
+		// calling service layer method to add the member
 		MBR resultMbr =	mbrServiceImpl.addMember(member);
 		return ResponseEntity.ok(resultMbr);
 	}

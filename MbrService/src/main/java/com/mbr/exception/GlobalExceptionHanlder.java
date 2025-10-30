@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.mbr.payload.ApiResponse;
 
+@lombok.Builder
 @RestControllerAdvice
 public class GlobalExceptionHanlder {
 
@@ -18,6 +19,8 @@ public class GlobalExceptionHanlder {
 		apiResponse.setMessage(message);
 		apiResponse.setSuccess(true);
 		apiResponse.setStatus(HttpStatus.NOT_FOUND);
+		
+		//ApiResponse apiResponse2 = ApiResponse.builer();
 		
 		return new ResponseEntity<ApiResponse>(apiResponse,HttpStatus.NOT_FOUND);
 		
