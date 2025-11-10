@@ -1,13 +1,9 @@
 package singletonpattern;
 
-import java.lang.reflect.Constructor;
-
 public class MainSingleton {
-	public static void main(String args[]) throws Exception {
+	public static void main(String args[]) {
 		 Singleton singleton1 = Singleton.getInstance();
-		 Constructor<Singleton> construtor = Singleton.class.getDeclaredConstructor();
-		 construtor.setAccessible(true);
-		 Singleton singleton2 = construtor.newInstance();
-		 System.out.println(singleton1==singleton2); // false 
+		 Singleton singleton2 = Singleton.getInstance();
+		 System.out.println(singleton1==singleton2); // true - same object 
 	}
 }
